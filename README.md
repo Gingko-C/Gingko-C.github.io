@@ -1,1 +1,0 @@
-# Gingko-C.github.io
