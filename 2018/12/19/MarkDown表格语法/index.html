@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Technology blog"><title>MarkDown表格语法 | Timescapes</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">MarkDown表格语法</h1><a id="logo" href="/.">Timescapes</a><p class="description">时间是最美的风景。</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">MarkDown表格语法</h1><div class="post-meta">Dec 19, 2018<span> | </span><span class="category"><a href="/categories/零碎笔记/">零碎笔记</a></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#普通的表格"><span class="toc-number">1.</span> <span class="toc-text">普通的表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#带格式的表格"><span class="toc-number">2.</span> <span class="toc-text">带格式的表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语法说明"><span class="toc-number">3.</span> <span class="toc-text">语法说明</span></a></li></ol></div></div><div class="post-content"><p>Markdown作为一种轻量级书写/写作语言，并没有提供很好的排版、编辑等功能。因此，如果想要利用Markdown创建表格（特别是复杂表格），其实是一项不太轻松的事情。<a id="more"></a> </p>
+<h2 id="普通的表格"><a href="#普通的表格" class="headerlink" title="普通的表格"></a>普通的表格</h2><p>默认情况下，Markdown 插入的表格，单元格中的内容默认左对齐；表头单元格中的内容会一直居中对齐（不同的实现可能会有不同表现）。<br>Markdown 代码:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> 一个普通标题 </span>|<span class="string"> 一个普通标题 </span>|<span class="string"> 一个普通标题 </span>|</span><br><span class="line">|<span class="string"> ------ </span>|<span class="string"> ------ </span>|<span class="string"> ------ </span>|</span><br><span class="line">|<span class="string"> 短文本 </span>|<span class="string"> 中等文本 </span>|<span class="string"> 稍微长一点的文本 </span>|</span><br><span class="line">|<span class="string"> 稍微长一点的文本 </span>|<span class="string"> 短文本 </span>|<span class="string"> 中等文本 </span>|</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<table>
+<thead>
+<tr>
+<th>一个普通标题</th>
+<th>一个普通标题</th>
+<th>一个普通标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>短文本</td>
+<td>中等文本</td>
+<td>稍微长一点的文本</td>
+</tr>
+<tr>
+<td>稍微长一点的文本</td>
+<td>短文本</td>
+<td>中等文本</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意，使用时发现，表格的语句上一行必须为空行，不然表格不生效。</strong></p>
+<h2 id="带格式的表格"><a href="#带格式的表格" class="headerlink" title="带格式的表格"></a>带格式的表格</h2><p>Markdown 代码:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> 左对齐标题 </span>|<span class="string"> 右对齐标题 </span>|<span class="string"> 居中对齐标题 </span>|</span><br><span class="line">|<span class="string"> :------</span>|<span class="string"> ------: </span>|<span class="string"> :------: </span>|</span><br><span class="line">|<span class="string"> 短文本 </span>|<span class="string"> 中等文本 </span>|<span class="string"> 稍微长一点的文本 </span>|</span><br><span class="line">|<span class="string"> 稍微长一点的文本 </span>|<span class="string"> 短文本 </span>|<span class="string"> 中等文本 </span>|</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐标题</th>
+<th style="text-align:right">右对齐标题</th>
+<th style="text-align:center">居中对齐标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">短文本</td>
+<td style="text-align:right">中等文本</td>
+<td style="text-align:center">稍微长一点的文本</td>
+</tr>
+<tr>
+<td style="text-align:left">稍微长一点的文本</td>
+<td style="text-align:right">短文本</td>
+<td style="text-align:center">中等文本</td>
+</tr>
+</tbody>
+</table>
+<h2 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h2><p>1）|、-、:之间的多余空格会被忽略，不影响布局。<br>2）默认标题栏居中对齐，内容居左对齐。<br>3）-:表示内容和标题栏居右对齐，:-表示内容和标题栏居左对齐，:-:表示内容和标题栏居中对齐。<br>4）内容和|之间的多余空格会被忽略，每行第一个|和最后一个|可以省略，-的数量至少有一个。  </p>
+<p><strong>参考文献：<a href="https://www.jianshu.com/p/2df05f279331" target="_blank" rel="noopener">Markdown插入表格语法–zizi192</a></strong></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a class="article-share-link" data-url="https://gingko-c.github.io/2018/12/19/MarkDown表格语法/" data-id="cjpwf6kju0002tkvcaoollmbe" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS46DQAxFUfa/aTLpQUcR5D6bIOG6NYpIIHUYWP7UtuG1fyx+/f+Voycf3XXxkiFDxmMZ++ki20rv6lw/pMqQIWMBBgmF/PP5lfOQmoZpGTJkyOAJXJoO9p8gQ4YMGeRx6XPIpmXIkCGjU8TyQFwriW+qxWXIkPFABu+63//5J/MNGTJkPIqxh4vcy8cG/f38PU2GDBmjGWmBek4irbT0aWQ/MmTImM1Ii8Za6OS/KcJkyJAxmlFr7pM/5s24NEyj1yRDhoxxDDJi5KGwNgyI3/fnv8uQIWMZBkn+OuUoHwbEzTsZMmSMZnQaZ2mQ7QTloJSVIUPGIEbneBYJlLwblgb3t29lyJAxmsEPOqRbSUvTy7qGMmTIGMdIN02oaQHMQ/CXKlyGDBkLMNIwGp8+u//MiAwZMkYzeNjlhShPCnmaiGpxGTJkjGPUQicvR0lamQZ3GTJkrMAIenJ4YsiPfPF23pdhgAwZMoYy+uGYhFQ+mKwNMmXIkLECo3/YgqeYaYAO0kcZMmQswOCNsFr5urVXPB6QIUPGOEbnYARhp8fO4oRVhgwZQxl7uNKys3/kIk4KZciQMY5RC3MkjHYSR7L1WrCWIUPGcxnpADJNCmtVZ/xSZMiQsQCjVsSSJh0Zc/aPncmQIUNGmvBdC/7JYECGDBkLMPrf8hYeegUyZMhYgNEfBqTDBv77i9ttMmTIeCCDl44kvPIymNxVO/YhQ4aMQYwXHx2yUFhsnhUAAAAASUVORK5CYII=">分享</a><div class="tags"><a href="/tags/MarkDown/">MarkDown</a></div><div class="post-nav"><a class="pre" href="/2018/12/19/Hexo中的Front-matter/">Hexo中的Front-matter</a></div><div id="container"></div><link rel="stylesheet" href="/css/default.css?v=0.0.0"><script src="/js/gitment.browser.js?v=0.0.0"></script><script>var gitment = new Gitment({
+  id: window.location.pathname.substring(1,window.location.pathname.length),
+  owner: 'Gingko-C',
+  repo: 'gingko-c.github.io',
+  oauth: {
+    client_id: '9af1e9d17f86e0271001',
+    client_secret: '03cbadb2a5a3afcb8906ef7444f5497de7f8c77b',
+  },
+})
+gitment.render('container')
+</script><div id="container"></div><link rel="stylesheet" type="text/css" href="//unpkg.com/gitalk/dist/gitalk.css?v=0.0.0"><script type="text/javascript" src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js?v=0.0.0"></script><script type="text/javascript" src="//unpkg.com/gitalk/dist/gitalk.min.js?v=0.0.0"></script><script>var gitalk = new Gitalk({
+  clientID: '9af1e9d17f86e0271001',
+  clientSecret: '03cbadb2a5a3afcb8906ef7444f5497de7f8c77b',
+  repo: 'gingko-c.github.io',
+  owner: 'Gingko-C',
+  admin: ['Gingko-C'],
+  id: md5(location.pathname),
+  distractionFreeMode: false
+})
+gitalk.render('container')
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/WEB/">WEB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/零碎笔记/">零碎笔记</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/MarkDown/" style="font-size: 15px;">MarkDown</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/19/Hexo中的Front-matter/">Hexo中的Front-matter</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/19/MarkDown表格语法/">MarkDown表格语法</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://owenchen0630.github.io/" title="OwenChen的博客" target="_blank">OwenChen的博客</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Timescapes.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

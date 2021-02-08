@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Timescapes</title>
+  
+  <subtitle>时间是最美的风景。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://gingko-c.github.io/"/>
+  <updated>2018-12-19T12:30:23.125Z</updated>
+  <id>https://gingko-c.github.io/</id>
+  
+  <author>
+    <name>Gingko</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo中的Front-matter</title>
+    <link href="https://gingko-c.github.io/2018/12/19/Hexo%E4%B8%AD%E7%9A%84Front-matter/"/>
+    <id>https://gingko-c.github.io/2018/12/19/Hexo中的Front-matter/</id>
+    <published>2018-12-19T12:00:00.000Z</published>
+    <updated>2018-12-19T12:30:23.125Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，举例来说：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="string">/7/13</span> <span class="number">20</span><span class="string">:46:25</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></p><p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p><table><thead><tr><th>参数</th><th>描述</th><th>默认值</th></tr></thead><tbody><tr><td>layout</td><td>布局</td><td></td></tr><tr><td>title</td><td>标题</td><td></td></tr><tr><td>date</td><td>建立日期</td><td>文件建立日期</td></tr><tr><td>updated</td><td>更新日期</td><td>文件更新日期</td></tr><tr><td>comments</td><td>开启文章的评论功能</td><td>true</td></tr><tr><td>tags</td><td>标签（不适用于分页）</td><td></td></tr><tr><td>categories</td><td>分类（不适用于分页）</td><td></td></tr><tr><td>permalink</td><td>覆盖文章网址</td><td></td></tr></tbody></table><h2 id="分类和标签"><a href="#分类和标签" class="headerlink" title="分类和标签"></a>分类和标签</h2><p>只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 <code>Foo, Bar</code> 不等于 <code>Bar, Foo</code>；而标签没有顺序和层次。<br><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">- Diary</span><br><span class="line"><span class="keyword">tags:</span></span><br><span class="line">- PS3</span><br><span class="line">- Games</span><br></pre></td></tr></table></figure></p><h3 id="分类方法的分歧"><a href="#分类方法的分歧" class="headerlink" title="分类方法的分歧"></a>分类方法的分歧</h3><p>如果您有过使用WordPress的经验，就很容易误解Hexo的分类方式。WordPress支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是Hexo不支持指定多个同级分类。下面的指定方法：<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line"><span class="bullet">- </span>Diary</span><br><span class="line"><span class="bullet">- </span>Life</span><br></pre></td></tr></table></figure></p><p>会使分类<code>Life</code>成为<code>Diary</code>的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。</p><h2 id="JSON-Front-matter"><a href="#JSON-Front-matter" class="headerlink" title="JSON Front-matter"></a>JSON Front-matter</h2><p>除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 — 代换成 ;;; 即可。</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"title"</span>: <span class="string">"Hello World"</span>,</span><br><span class="line"><span class="string">"date"</span>: <span class="string">"2013/7/13 20:46:25"</span></span><br><span class="line"><span class="comment">;;;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      Front-matter 是文件最上方以 --- 分隔的区域，用于指定个别文件的变量。可以由 YAML 和 JSON 两种风格来编写。
+    
+    </summary>
+    
+      <category term="WEB" scheme="https://gingko-c.github.io/categories/WEB/"/>
+    
+    
+      <category term="Hexo" scheme="https://gingko-c.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MarkDown表格语法</title>
+    <link href="https://gingko-c.github.io/2018/12/19/MarkDown%E8%A1%A8%E6%A0%BC%E8%AF%AD%E6%B3%95/"/>
+    <id>https://gingko-c.github.io/2018/12/19/MarkDown表格语法/</id>
+    <published>2018-12-19T07:34:03.000Z</published>
+    <updated>2018-12-19T11:38:23.979Z</updated>
+    
+    <content type="html"><![CDATA[<p>Markdown作为一种轻量级书写/写作语言，并没有提供很好的排版、编辑等功能。因此，如果想要利用Markdown创建表格（特别是复杂表格），其实是一项不太轻松的事情。<a id="more"></a> </p><h2 id="普通的表格"><a href="#普通的表格" class="headerlink" title="普通的表格"></a>普通的表格</h2><p>默认情况下，Markdown 插入的表格，单元格中的内容默认左对齐；表头单元格中的内容会一直居中对齐（不同的实现可能会有不同表现）。<br>Markdown 代码:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> 一个普通标题 </span>|<span class="string"> 一个普通标题 </span>|<span class="string"> 一个普通标题 </span>|</span><br><span class="line">|<span class="string"> ------ </span>|<span class="string"> ------ </span>|<span class="string"> ------ </span>|</span><br><span class="line">|<span class="string"> 短文本 </span>|<span class="string"> 中等文本 </span>|<span class="string"> 稍微长一点的文本 </span>|</span><br><span class="line">|<span class="string"> 稍微长一点的文本 </span>|<span class="string"> 短文本 </span>|<span class="string"> 中等文本 </span>|</span><br></pre></td></tr></table></figure></p><p>效果如下：</p><table><thead><tr><th>一个普通标题</th><th>一个普通标题</th><th>一个普通标题</th></tr></thead><tbody><tr><td>短文本</td><td>中等文本</td><td>稍微长一点的文本</td></tr><tr><td>稍微长一点的文本</td><td>短文本</td><td>中等文本</td></tr></tbody></table><p><strong>注意，使用时发现，表格的语句上一行必须为空行，不然表格不生效。</strong></p><h2 id="带格式的表格"><a href="#带格式的表格" class="headerlink" title="带格式的表格"></a>带格式的表格</h2><p>Markdown 代码:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> 左对齐标题 </span>|<span class="string"> 右对齐标题 </span>|<span class="string"> 居中对齐标题 </span>|</span><br><span class="line">|<span class="string"> :------</span>|<span class="string"> ------: </span>|<span class="string"> :------: </span>|</span><br><span class="line">|<span class="string"> 短文本 </span>|<span class="string"> 中等文本 </span>|<span class="string"> 稍微长一点的文本 </span>|</span><br><span class="line">|<span class="string"> 稍微长一点的文本 </span>|<span class="string"> 短文本 </span>|<span class="string"> 中等文本 </span>|</span><br></pre></td></tr></table></figure></p><p>效果如下：</p><table><thead><tr><th style="text-align:left">左对齐标题</th><th style="text-align:right">右对齐标题</th><th style="text-align:center">居中对齐标题</th></tr></thead><tbody><tr><td style="text-align:left">短文本</td><td style="text-align:right">中等文本</td><td style="text-align:center">稍微长一点的文本</td></tr><tr><td style="text-align:left">稍微长一点的文本</td><td style="text-align:right">短文本</td><td style="text-align:center">中等文本</td></tr></tbody></table><h2 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h2><p>1）|、-、:之间的多余空格会被忽略，不影响布局。<br>2）默认标题栏居中对齐，内容居左对齐。<br>3）-:表示内容和标题栏居右对齐，:-表示内容和标题栏居左对齐，:-:表示内容和标题栏居中对齐。<br>4）内容和|之间的多余空格会被忽略，每行第一个|和最后一个|可以省略，-的数量至少有一个。  </p><p><strong>参考文献：<a href="https://www.jianshu.com/p/2df05f279331" target="_blank" rel="noopener">Markdown插入表格语法–zizi192</a></strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Markdown作为一种轻量级书写/写作语言，并没有提供很好的排版、编辑等功能。因此，如果想要利用Markdown创建表格（特别是复杂表格），其实是一项不太轻松的事情。
+    
+    </summary>
+    
+      <category term="零碎笔记" scheme="https://gingko-c.github.io/categories/%E9%9B%B6%E7%A2%8E%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="MarkDown" scheme="https://gingko-c.github.io/tags/MarkDown/"/>
+    
+  </entry>
+  
+</feed>
